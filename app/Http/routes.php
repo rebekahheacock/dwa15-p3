@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Route::get('/loremipsum', 'LoremIpsumController@getIndex');
+// Route::post('/loremipsum', 'LoremIpsumController@postIndex');
+
+Route::controller('/loremipsum', 'LoremIpsumController');
+Route::controller('/users', 'UserController');
