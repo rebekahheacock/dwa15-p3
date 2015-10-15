@@ -7,7 +7,10 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "twbs/bootstrap": "^3.3"
+        "twbs/bootstrap": "^3.3",
+        "rap2hpoutre/laravel-log-viewer": "^0.4.3",
+        "barryvdh/laravel-debugbar": "^2.0",
+        "badcow/lorem-ipsum": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

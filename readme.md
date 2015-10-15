@@ -17,6 +17,7 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 ## TODO
 - ~~install Laravel and get it running locally~~
 - ~~install Bootstrap using [these instructions](http://transmission.vehikl.com/adding-twitter-bootstrap-to-your-laravel-5-app/)~~
+- ~~install necessary packages~~
 - create subdomain & get in running on Digital Ocean
 - deploy to Digital Ocean
 - ~~create plan for routes/views/controllers~~
