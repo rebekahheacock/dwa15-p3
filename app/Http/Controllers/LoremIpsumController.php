@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
+use Faker\Factory as Faker;
+
 class LoremIpsumController extends Controller {
 
     public function __construct() {
@@ -14,7 +16,9 @@ class LoremIpsumController extends Controller {
     * Responds to requests to GET /
     */
     public function getIndex() {
-        return 'Display forms for Lorem Ipsum generator plus any generated text';
+        // echo 'Display forms for Lorem Ipsum generator plus any generated text';
+        $faker = Faker::create();
+        return 'name is: ' . $faker->name;
     }
 
     /**
