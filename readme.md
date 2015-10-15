@@ -16,6 +16,7 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 
 - [fzaninotto/faker](https://github.com/fzaninotto/Faker)
 - [badcow/lorem-ipsum](https://github.com/Badcow/LoremIpsum)
+- [twbs/bootstrap](https://github.com/twbs/bootstrap)
 
 ## TODO
 - ~~install Laravel and get it running locally~~
