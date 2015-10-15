@@ -22,7 +22,9 @@ Route::get('/', function () {
 Route::controller('/loremipsum', 'LoremIpsumController');
 Route::controller('/users', 'UserController');
 
-Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+if(App::environment('local')) {
+    Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+};
 
 Route::get('/practice', function () {
 	return 'practice';
