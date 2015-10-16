@@ -16,8 +16,6 @@ class UserController extends Controller {
     * Responds to requests to GET /users
     */
     public function getIndex() {
-        // $faker = Faker::create();
-        // return 'name is: ' . $faker->name;
         $numusers = '';
         return view ('users')->with('numusers',$numusers);
     }
@@ -27,5 +25,7 @@ class UserController extends Controller {
      */
     public function postIndex() {
         return 'Process random user generation';
+        // $faker = Faker::create();
+        // return 'name is: ' . $faker->name;
     }
 }
