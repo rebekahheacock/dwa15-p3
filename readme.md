@@ -27,9 +27,9 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 - ~~create plan for routes/views/controllers~~
 - create base template for site
 	- homepage
-	- lorem ipsum
-		- form: specify # of paragraphs
-		- return generated LI text
+	- ~~lorem ipsum~~
+		- ~~form: specify # of paragraphs~~
+		- ~~return generated LI text~~
 	- random user generator
 		- form: # of users, whether to include birthday, email, password, profile text, photo?
 		- return name(s): title?, first, last, suffix?
