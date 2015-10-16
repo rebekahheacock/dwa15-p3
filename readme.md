@@ -31,7 +31,7 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 		- ~~form: specify # of paragraphs~~
 		- ~~return generated LI text~~
 	- random user generator
-		- form: # of users, whether to include birthday, password, profile text, photo?
+		- ~~form: # of users, whether to include birthday, password, profile text, photo?~~
 			- automatically return: name, username, email
 		- return name(s): title?, first, last, suffix?
 		- return optional birthday(s), email password(s), profile text, photo(s)?
