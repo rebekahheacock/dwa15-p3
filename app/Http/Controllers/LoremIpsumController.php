@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
+use Illuminate\Http\Request;
+
 class LoremIpsumController extends Controller {
 
     public function __construct() {
@@ -11,17 +13,21 @@ class LoremIpsumController extends Controller {
     }
 
     /**
-    * Responds to requests to GET /lorempipsum
+    * Responds to requests to GET /loremipsum
     */
     public function getIndex() {
-
         return view('loremipsum');
     }
 
     /**
-     * Responds to requests to POST /lorempipsum
+     * Responds to requests to POST /loremipsum
      */
-    public function postIndex() {
-        return 'Process form for Lorem Ipsum generator';
+    public function postIndex(Request $request) {
+        $grafs = $request->input('grafs');
+
+        $generator = new \Badcow\LoremIpsum\Generator();
+        $paragraphs = $generator->getParagraphs($grafs);
+
+        return view('loremipsum')->with('paragraphs', $paragraphs);
     }
 }
