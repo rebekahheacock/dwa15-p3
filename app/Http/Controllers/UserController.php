@@ -18,7 +18,8 @@ class UserController extends Controller {
     public function getIndex() {
         // $faker = Faker::create();
         // return 'name is: ' . $faker->name;
-        return view ('users');
+        $numusers = '';
+        return view ('users')->with('numusers',$numusers);
     }
 
     /**
