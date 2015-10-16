@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
+use Faker\Factory as Faker;
+
 class UserController extends Controller {
 
     public function __construct() {
@@ -11,14 +13,16 @@ class UserController extends Controller {
     }
 
     /**
-    * Responds to requests to GET /
+    * Responds to requests to GET /users
     */
     public function getIndex() {
-        return 'Form for random user generator plus display for generated users';
+        // $faker = Faker::create();
+        // return 'name is: ' . $faker->name;
+        return view ('users');
     }
 
     /**
-     * Responds to requests to POST /
+     * Responds to requests to POST /users
      */
     public function postIndex() {
         return 'Process random user generation';

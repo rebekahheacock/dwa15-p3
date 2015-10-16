@@ -25,12 +25,20 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 - create subdomain & get in running on Digital Ocean
 - deploy to Digital Ocean
 - ~~create plan for routes/views/controllers~~
-- homepage
-- lorem ipsum
-	- form: specify # of paragraphs
-	- return generated LI text
-- random user generator
-	- form: # of users, whether to include birthday, email, password, profile text, photo?
-	- return name(s): title?, first, last, suffix?
-	- return optional birthday(s), email password(s), profile text, photo(s)?
+- create base template for site
+	- homepage
+	- lorem ipsum
+		- form: specify # of paragraphs
+		- return generated LI text
+	- random user generator
+		- form: # of users, whether to include birthday, email, password, profile text, photo?
+		- return name(s): title?, first, last, suffix?
+		- return optional birthday(s), email password(s), profile text, photo(s)?
+
+## TODO IF TIME
+- incorporate pwd generator
+- put everything on same page
+- permissions calculator
+- different output formats for user data / lorem ipsum?
+- make it pretty
 
