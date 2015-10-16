@@ -26,6 +26,6 @@ if(App::environment('local')) {
     Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 };
 
-Route::get('/practice', function () {
-	return 'practice';
-});
+// Route::get('/practice', function () {
+// 	return 'practice';
+// });

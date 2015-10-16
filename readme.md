@@ -36,7 +36,7 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 			- automatically return: name, username, email
 		- return name(s): title?, first, last, suffix?
 		- return optional birthday(s), email password(s), profile text, photo(s)?
-		- retain form inputs after submission
+		- ~~retain form inputs after submission~~
 
 ## TODO IF TIME
 - incorporate pwd generator

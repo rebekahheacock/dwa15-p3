@@ -25,10 +25,10 @@ class LoremIpsumController extends Controller {
      */
     public function postIndex(Request $request) {
         $grafs = $request->input('grafs');
-
         $generator = new \Badcow\LoremIpsum\Generator();
         $paragraphs = $generator->getParagraphs($grafs);
-
-        return view('loremipsum')->with('paragraphs', $paragraphs)->with('grafs',$grafs);
+        // \Debugbar::info($generator);
+        // \Debugbar::info($paragraphs);
+        return view('loremipsum')->with('paragraphs', $paragraphs)->with('grafs', $grafs);
     }
 }
