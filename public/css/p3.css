@@ -1,3 +1,15 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+}
+
+a {
+	color: #434C67;
+}
+
 .subhead {
 	padding-top: 50px;
 }
@@ -11,33 +23,36 @@ nav {
 	border: 0px;
 }
 
+.nav > li > a {
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
 .nav > li > a:hover, .nav > li > a:focus {
 	background: #DDD2CE;
 }
 
 a.navbar-brand {
-	color: ##2A3249;
+	color: #333;
 	text-transform: uppercase;
 	font-size: 24px;
 }
 
 a.navbar-brand:hover {
-	color: #2A3249;
-}
-a {
-	color: #2A3249;
+	color: #23527c;
 }
 
 .home {
 	background: #0D152E;
 	text-align: center;
 	position: relative;
-	padding: 5em;
+	padding: 2em 0 2em 0;
 }
 
 .cogs {
 	color: #1B2440;
-	font-size: 5vw;
+	font-size: 4vw;
 }
 
 .home-header {
@@ -46,10 +61,54 @@ a {
 	font-size: 7vw;
 	text-transform: uppercase;
 	position: absolute;
-	top: 0;
-	bottom: 0;
+	top: 10%;
 	left: 0;
 	right: 0;
 	margin: auto;
-	height: 50%;
+}
+
+.apps .col-md-3 {
+	text-align: center;
+	padding-top: 5%;
+}
+
+.apps i {
+	color: #434C67;
+}
+
+.apps p {
+	font-family: 'Lato', sans-serif;
+}
+
+a.tile {
+	color: #333333;
+	display: block;
+	padding: 1em;
+}
+
+a.tile:hover {
+	color: #333333;
+	background: #DDD2CE;
+	text-decoration: none;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #DDD2CE;
+	padding: 15px 5px;
+	height: 50px;
+}
+
+label {
+	font-weight: normal;
+}
+
+.icon-bar {
+	background-color: #F6EFED;
+}
+
+.navbar-toggle {
+	background-color: #DDD2CE;
 }

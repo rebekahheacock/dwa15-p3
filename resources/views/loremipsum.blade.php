@@ -5,12 +5,9 @@
 @stop
 
 @section('subhead')
-	@parent
-	<h1>Lorem Ipsum</h1>
-@stop
-
-@section('endsubhead')
-	@parent
+	<div class="subhead">
+		<h1><i class="fa fa-align-justify"></i> Lorem Ipsum Generator</h1>
+	</div>
 @stop
 
 @section('content')
