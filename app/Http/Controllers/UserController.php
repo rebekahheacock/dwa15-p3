@@ -18,51 +18,89 @@ class UserController extends Controller {
     * Responds to requests to GET /users
     */
     public function getIndex() {
-        $numusers = '';
-        $addressyes = '';
-        $phoneyes = '';
-        $birthdayyes = '';
-        $profileyes = '';
-        $photoyes = '';
-        return view(('users'), compact('numusers', 'addressyes', 'phoneyes', 'birthdayyes', 'profileyes', 'photoyes'));
+        $formdata['numusers'] = '';
+        $formdata['phoneyes'] = '';
+        $formdata['birthdayyes'] = '';
+        $formdata['profileyes'] = '';
+        $formdata['photoyes'] = '';
+        $formdata['addressyes'] = '';
+        $formdata['phoneyes'] = '';
+        $formdata['birthdayyes'] = '';
+        $formdata['profileyes'] = '';
+        $formdata['photoyes'] = '';
+        return view('users')->with('formdata',$formdata);
     }
 
     /**
      * Responds to requests to POST /users
      */
     public function postIndex(Request $request) {
-        $numusers = '';
-        $addressyes = '';
-        $phoneyes = '';
-        $birthdayyes = '';
-        $profileyes = '';
-        $photoyes = '';
+        $faker = Faker::create();
+
+        $formdata['addressyes'] = '';
+        $formdata['phoneyes'] = '';
+        $formdata['birthdayyes'] = '';
+        $formdata['profileyes'] = '';
+        $formdata['photoyes'] = '';
 
         $numusers = $request->input('numusers');
+
+        $formdata['numusers'] = $numusers;
+
         $address = $request->input('address');
-        \Debugbar::info($address);
         if ($address == 'on') {
-            $addressyes = 'checked';
+            $formdata['addressyes'] = 'checked';   
         }
         $phone = $request->input('phone');
         if ($phone == 'on') {
-            $phoneyes = 'checked';
+            $formdata['phoneyes'] = 'checked';
         }
         $birthday = $request->input('birthday');
         if ($birthday == 'on') {
-            $birthdayyes = 'checked';
+            $formdata['birthdayyes'] = 'checked';
         }
         $profile = $request->input('profile');
         if ($profile == 'on') {
-            $profileyes = 'checked';
+            $formdata['profileyes'] = 'checked';
         }
         $photo = $request->input('photo');
         if ($photo == 'on') {
-            $photoyes = 'checked';
+            $formdata['photoyes'] = 'checked';
         }
 
-        // $faker = Faker::create();
-        // return 'name is: ' . $faker->name;
-        return view(('users'), compact('numusers', 'addressyes', 'phoneyes', 'birthdayyes', 'profileyes', 'photoyes'));
+        for ($i = 0; $i < $numusers; $i++) {
+            $users[$i]['name'] = $faker->name;
+            $users[$i]['username'] = $faker->username;
+            $users[$i]['email'] = $faker->email;
+            if ($address == 'on') {
+                $users[$i]['streetaddress'] = $faker->streetAddress;
+                $users[$i]['city'] = $faker->city;
+                $users[$i]['postcode'] = $faker->postcode;
+                $users[$i]['state'] = $faker->stateAbbr;
+            }
+            if ($phone == 'on') {
+                $users[$i]['phone'] = $faker->phoneNumber;
+            }
+            if ($birthday == 'on') {
+                /*  
+                    note: setting minimum age of fake users to 13
+                    to avoid COPPA complications: http://www.coppa.org/
+                */
+                $users[$i]['birthday'] = $faker->date($format = 'Y-m-d', $max = '2002-10-21');
+            }
+            if ($profile == 'on') {
+                $users[$i]['profile'] = $faker->text($maxNbChars = 140);
+            }
+            if ($photo == 'on') {
+                $users[$i]['photo'] = '<img class="profilephoto" src="'.$faker->imageUrl($width = 200, $height = 200, 'cats').'">';
+            }
+        }
+        \Debugbar::info($users);
+
+        $users;
+        $formdata;
+        
+
+        return view('users')->with('users', $users)->with('formdata', $formdata);
     }
 }

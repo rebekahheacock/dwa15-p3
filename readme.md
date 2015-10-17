@@ -16,7 +16,9 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 
 - [fzaninotto/faker](https://github.com/fzaninotto/Faker)
 - [badcow/lorem-ipsum](https://github.com/Badcow/LoremIpsum)
+	- installed Bootstrap using [these instructions](http://transmission.vehikl.com/adding-twitter-bootstrap-to-your-laravel-5-app/)
 - [twbs/bootstrap](https://github.com/twbs/bootstrap)
+- [passing multiple variables to a Laravel 5 view](http://www.easylaravelbook.com/blog/2015/03/09/passing-multiple-variables-into-a-laravel-5-view/)
 
 ## TODO
 - ~~install Laravel and get it running locally~~
