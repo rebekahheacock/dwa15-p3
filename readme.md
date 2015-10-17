@@ -38,8 +38,8 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 			- ~~automatically return: name, username, email~~
 		- ~~return optional birthday(s), email password(s), profile text, photo(s)~~
 		- ~~retain form inputs after submission~~
-- customize error messages
-- style error reporting
+- ~~customize error messages~~
+- ~~style error reporting~~
 - style user output
 
 ## TODO IF TIME
