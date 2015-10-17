@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Developer's Best Friend</title>
+@extends('layouts.master')
 
-        <link href="css/app.css" rel="stylesheet" type="text/css">
+@section('title')
+    RHJ: Developer's Best Friend
+@stop
 
-        
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Developer's Best Friend</div>
-            </div>
+@section('navbar')
+@stop
+
+@section('subhead')
+@stop
+
+@section('content')
+
+    <div class="row home">
+        <div class="cogs">
+            <i class="fa fa-cogs fa-5x"></i>
         </div>
-    </body>
-</html>
+        <div class="home-header">
+            Developer's<br>
+            Best Friend
+        </div>
+        <div class="clear"> </div>
+    </div>
+@stop

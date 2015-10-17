@@ -4,8 +4,13 @@
 	RHJ: LoremIpsum
 @stop
 
-@section('header')
+@section('subhead')
+	@parent
 	<h1>Lorem Ipsum</h1>
+@stop
+
+@section('endsubhead')
+	@parent
 @stop
 
 @section('content')

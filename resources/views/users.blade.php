@@ -4,8 +4,17 @@
 	RHJ: User Generator
 @stop
 
-@section('header')
-	<h1><s>User</s> Cat Generator</h1>
+@section('navbar')
+	@parent
+@stop
+
+@section('subhead')
+	@parent
+	<h1>User Generator</h1>
+@stop
+
+@section('endsubhead')
+	@parent
 @stop
 
 @section('content')
