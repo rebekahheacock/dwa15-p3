@@ -37,6 +37,10 @@ class UserController extends Controller {
     public function postIndex(Request $request) {
         $faker = Faker::create();
 
+        $this->validate($request, 
+            ['numusers' => 'required|numeric|min:1|max:10']
+        );
+
         $formdata['addressyes'] = '';
         $formdata['phoneyes'] = '';
         $formdata['birthdayyes'] = '';

@@ -9,11 +9,20 @@
 @stop
 
 @section('content')
+
+	@if(count($errors) > 0)
+	    <ul>
+	        @foreach ($errors->all() as $error)
+	            <li>{{ $error }}</li>
+	        @endforeach
+	    </ul>
+	@endif
+	
 	<form method='POST' action='users'>
 	    <input type='hidden' name='_token' value='{{ csrf_token() }}'>
 	    <div class="form-group">
 		    <label for="numusers">Number of <s>users</s> cats (max 10)</label>
-		    <input type="number" name="numusers" min="1" max="10" value="<?php echo $formdata['numusers']; ?>">
+		    <input type="number" name="numusers" value="<?php echo $formdata['numusers']; ?>">
 		</div>
 		 <div class="checkbox">
 		    <label>
