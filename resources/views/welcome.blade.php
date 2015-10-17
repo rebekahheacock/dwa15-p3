@@ -12,7 +12,7 @@
 
 @section('content')
 
-    <div class="row home">
+    <div class="home">
         <div class="cogs">
             <i class="fa fa-cogs fa-5x"></i>
         </div>

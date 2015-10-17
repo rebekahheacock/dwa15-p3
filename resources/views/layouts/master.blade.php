@@ -29,7 +29,7 @@
 	<div class="container-fluid">
 		@section('subhead')
 			<section>
-				<div class="row subhead">
+				<div class="subhead">
 
 		@show
 		@section('endsubhead')

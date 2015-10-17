@@ -31,26 +31,25 @@ a {
 .home {
 	background: #0D152E;
 	text-align: center;
-	padding: 3em;
 	position: relative;
+	padding: 5em;
 }
 
 .cogs {
 	color: #1B2440;
-	font-size: 5em;
-	position: absolute;
-	top: 0;
+	font-size: 5vw;
 }
 
 .home-header {
 	color: #5E6782;
 	font-family: 'Oswald', sans-serif;
-	font-size: 5em;
+	font-size: 7vw;
 	text-transform: uppercase;
 	position: absolute;
 	top: 0;
-}
-
-.clear {
-	clear: both;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 50%;
 }
