@@ -12,6 +12,9 @@ TK
 
 From assignment: "Create a web application [using Laravel] called Developer's Best Friend which includes a Lorem Ipsum Generator and a Random User Generator."
 
+Includes both HTML5 (<code>input type="number" min="1" max="10"</code> and Laravel-based validation (<code>'grafs' => 'required|numeric|min:1|max:10'</code>) with custom error messages on form inputs.
+
+
 ## Outside Resources
 
 - [fzaninotto/faker](https://github.com/fzaninotto/Faker)
