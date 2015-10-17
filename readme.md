@@ -35,9 +35,8 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 		- ~~retain form inputs after submission~~
 	- random user generator
 		- ~~form: # of users, whether to include birthday, password, profile text, photo?~~
-			- automatically return: name, username, email
-		- return name(s): title?, first, last, suffix?
-		- return optional birthday(s), email password(s), profile text, photo(s)?
+			- ~~automatically return: name, username, email~~
+		- ~~return optional birthday(s), email password(s), profile text, photo(s)~~
 		- ~~retain form inputs after submission~~
 
 ## TODO IF TIME
