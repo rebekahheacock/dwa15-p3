@@ -34,20 +34,10 @@
 		</nav>
 	@show
 
-	<div class="container-fluid">
 
-		@yield('subhead')
+	@yield('subhead')
 
-		@yield('content')
-
-	</div>
-
-
-	<footer>
-		<p>Created by Rebekah Heacock Jones for <a href="http://dwa15.com">DWA15</a> | <a href="https://github.com/rebekahheacock/dwa15-p3">github</a></p>
-	</footer>
-
-
+	@yield('content')
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

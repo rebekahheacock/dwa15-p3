@@ -96,7 +96,7 @@ class UserController extends Controller {
                 $users[$i]['profile'] = $faker->text($maxNbChars = 140);
             }
             if ($photo == 'on') {
-                $users[$i]['photo'] = '<img class="profilephoto" src="'.$faker->imageUrl($width = 200, $height = 200, 'cats').'">';
+                $users[$i]['photo'] = $faker->imageUrl($width = 200, $height = 200, 'cats');
             }
         }
         \Debugbar::info($users);

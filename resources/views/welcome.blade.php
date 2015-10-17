@@ -42,4 +42,9 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>Rebekah Heacock Jones, 2015 | <a href="https://github.com/rebekahheacock/dwa15-p3">code on github</a></p>
+    </footer>
+    </footer>
 @stop
