@@ -27,6 +27,7 @@ class LoremIpsumController extends Controller {
         $this->validate($request, 
             ['grafs' => 'required|numeric|min:1|max:10']
         );
+        
         $grafs = $request->input('grafs');
         $generator = new \Badcow\LoremIpsum\Generator();
         $paragraphs = $generator->getParagraphs($grafs);

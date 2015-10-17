@@ -33,16 +33,18 @@ From assignment: "Create a web application [using Laravel] called Developer's Be
 		- ~~form: specify # of paragraphs~~
 		- ~~return generated LI text~~
 		- ~~retain form inputs after submission~~
-	- random user generator
+	- ~~random user generator~~
 		- ~~form: # of users, whether to include birthday, password, profile text, photo?~~
 			- ~~automatically return: name, username, email~~
 		- ~~return optional birthday(s), email password(s), profile text, photo(s)~~
 		- ~~retain form inputs after submission~~
+- customize error messages
+- style error reporting
+- style user output
 
 ## TODO IF TIME
 - incorporate pwd generator
 - put everything on same page
 - permissions calculator
 - different output formats for user data / lorem ipsum?
-- make it pretty
 

@@ -22,7 +22,7 @@
 	    <input type='hidden' name='_token' value='{{ csrf_token() }}'>
 	    <div class="form-group">
 		    <label for="numusers">Number of <s>users</s> cats (max 10)</label>
-		    <input type="number" name="numusers" value="<?php echo $formdata['numusers']; ?>">
+		    <input type="text" name="numusers" value="<?php echo $formdata['numusers']; ?>">
 		</div>
 		 <div class="checkbox">
 		    <label>

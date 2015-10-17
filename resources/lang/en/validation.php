@@ -91,6 +91,18 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'grafs' => [
+            'required'  => 'You must specify a number of paragraphs.',
+            'numeric'   => 'You must enter a number.',
+            'min'       => 'You must request at least 1 paragraph.',
+            'max'       => 'The max number of paragraphs is 10.'
+        ],
+        'numusers' => [
+            'required'  => 'You must specify a number of users.',
+            'numeric'   => 'You must enter a number.',
+            'min'       => 'You must request at least 1 user.',
+            'max'       => 'The max number of users is 10.'
+        ],
     ],
 
     /*

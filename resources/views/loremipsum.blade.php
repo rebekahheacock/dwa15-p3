@@ -12,7 +12,7 @@
 
 	@if(count($errors) > 0)
 	    <ul>
-	        @foreach ($errors->all() as $error)
+	        @foreach ($errors->all() as $error) 
 	            <li>{{ $error }}</li>
 	        @endforeach
 	    </ul>
@@ -22,7 +22,7 @@
 	    <input type='hidden' name='_token' value='{{ csrf_token() }}'>
 	    <div class="form-group">
 		    <label for="grafs">Number of paragraphs (max 10)</label>
-		    <input type="number" name="grafs" value="<?php echo $grafs; ?>">
+		    <input type="text" name="grafs" value="<?php echo $grafs; ?>">
 		</div>
 		<button type="submit" class="btn btn-default" title="Let's do it">Faciamus hoc</button>
 	</form>
