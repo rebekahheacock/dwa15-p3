@@ -55,6 +55,10 @@ Allows users to download Random User Generator results as JSON or CSV, in additi
 
 ## TODO IF TIME
 - incorporate pwd generator
+	- ~~port over form~~
+		- ~~include js~~
+	- test input validation in laravel
+	- password output
 - put everything on same page
 - permissions calculator
 

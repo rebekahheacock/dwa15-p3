@@ -26,10 +26,10 @@
 				@endforeach
 			@endif
 	
-			<form method='POST' action='users'>
-			    <input type='hidden' name='_token' value='{{ csrf_token() }}'>
+			<form method="POST" action="users">
+			    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 			    <label for="numusers">Number of users (max 10)</label>
-			    <input type="number" name="numusers" min="1" max="10" value="<?php echo $formdata['numusers']; ?>" required>
+			    <input type="number" name="numusers" class="form-control" min="1" max="10" value="<?php echo $formdata['numusers']; ?>" required>
 				 <div class="checkbox">
 				    <label>
 				      <input type="checkbox" <?php echo $formdata['addressyes']; ?> name="address"> Include a mailing address

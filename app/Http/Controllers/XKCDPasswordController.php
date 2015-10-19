@@ -16,16 +16,29 @@ class XKCDPasswordController extends Controller {
     * Responds to requests to GET /loremipsum
     */
     public function getIndex() {
-        $grafs = '';
-        return view('password')->with('grafs',$grafs);
+        $formdata['numwords'] = '';
+        $formdata['numyes'] = '';
+        $formdata['symbolyes'] = '';
+        $formdata['memorable'] = '';
+        $formdata['separator_space'] = ''; 
+        $formdata['separator_dash'] = ''; 
+        $formdata['separator_dot'] = '';   
+        $formdata['separator_none'] = '';
+        $formdata['separator_random'] = ''; 
+        $formdata['dino'] = ''; 
+        $separators = [' ', '-', '.', ''];
+
+        return view('password')->with('formdata',$formdata);
     }
 
     /**
      * Responds to requests to POST /loremipsum
      */
     public function postIndex(Request $request) {
-        $this->validate($request, 
-            ['grafs' => 'required|numeric|min:1|max:10']
+        $this->validate($request, [
+            'numwords' => 'required|numeric|min:1|max:9',
+            'separator' => 'required'
+            ]
         );
         
         $grafs = $request->input('grafs');
