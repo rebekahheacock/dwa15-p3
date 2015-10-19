@@ -30,8 +30,8 @@ Includes both HTML5 validation and Laravel-based validation with custom error me
 - create subdomain & get in running on Digital Ocean
 - deploy to Digital Ocean
 - ~~create plan for routes/views/controllers~~
-- create base template for site
-	- homepage
+- ~~create base template for site~~
+	- ~~homepage~~
 	- ~~lorem ipsum~~
 		- ~~form: specify # of paragraphs~~
 		- ~~return generated LI text~~
@@ -43,11 +43,11 @@ Includes both HTML5 validation and Laravel-based validation with custom error me
 		- ~~retain form inputs after submission~~
 - ~~customize error messages~~
 - ~~style error reporting~~
-- style user output
+- ~~style user output~~
 
 ## TODO IF TIME
 - incorporate pwd generator
 - put everything on same page
 - permissions calculator
-- different output formats for user data / lorem ipsum?
+- different output formats for user data
 
