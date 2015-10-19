@@ -48,3 +48,7 @@
 		</div>
     </div>
 @stop
+
+@section('body')
+	<script src="js/p2.js"></script>
+@stop
