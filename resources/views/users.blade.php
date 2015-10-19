@@ -63,14 +63,18 @@
 
 			@if(isset($users))
 				<div class="users">
+				<p class="json"><a href="<?php echo url(); ?>/randomusers.json" target="_blank" class="btn btn-default">Download results as JSON</a></p>
 		        	@foreach($users as $user) 
 		        		<div class="user">
 	        				@if(isset($user['photo']))
 		        				<div class="profilepic">
 									<img class="profilepic" src="{{ $user['photo']}}">
 								</div>
+								<div class="userinfo-pic">
+							@else
+								<div class="userinfo-nopic">
 	        				@endif
-	        				<div class="userinfo">
+	        				
 				        		<p class="name">{{ $user['name'] }} <small>{{ $user['username'] }}</small></p>
 				        		@if(isset($user['profile']))
 				        			<p class="profile">{{ $user['profile']}}</p>

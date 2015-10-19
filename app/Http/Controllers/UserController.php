@@ -76,7 +76,6 @@ class UserController extends Controller {
             $users[$i]['name'] = $faker->name;
             $users[$i]['username'] = $faker->username;
             $users[$i]['email'] = $faker->email;
-            $users[$i]['password'] = $faker->password;
             if ($address == 'on') {
                 $users[$i]['streetaddress'] = $faker->streetAddress;
                 $users[$i]['city'] = $faker->city;
@@ -100,14 +99,12 @@ class UserController extends Controller {
                 $users[$i]['photo'] = $faker->imageUrl($width = 200, $height = 200, 'cats');
             }
         }
-        \Debugbar::info($users);
-
-        $users;
 
         // figure out how to let users download/access this:
-        // $usersjson = json_encode($users);
-        $formdata;
         
+        $fp = fopen('randomusers.json', 'w');
+        fwrite($fp, json_encode($users));
+        fclose($fp);
 
         return view('users')->with('users', $users)->with('formdata', $formdata);
     }
