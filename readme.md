@@ -22,6 +22,8 @@ Includes both HTML5 validation and Laravel-based validation with custom error me
 	- installed Bootstrap using [these instructions](http://transmission.vehikl.com/adding-twitter-bootstrap-to-your-laravel-5-app/)
 - [twbs/bootstrap](https://github.com/twbs/bootstrap)
 - [passing multiple variables to a Laravel 5 view](http://www.easylaravelbook.com/blog/2015/03/09/passing-multiple-variables-into-a-laravel-5-view/)
+- [writing array to CSV file](http://www.php.net/manual/en/splfileobject.fputcsv.php)
+- [writing array to JSON file](http://stackoverflow.com/questions/2467945/how-to-generate-json-file-with-php)
 
 ## TODO
 - ~~install Laravel and get it running locally~~
@@ -44,10 +46,11 @@ Includes both HTML5 validation and Laravel-based validation with custom error me
 - ~~customize error messages~~
 - ~~style error reporting~~
 - ~~style user output~~
+- ~~different output formats for user data~~
 
 ## TODO IF TIME
 - incorporate pwd generator
 - put everything on same page
 - permissions calculator
-- different output formats for user data
+
 

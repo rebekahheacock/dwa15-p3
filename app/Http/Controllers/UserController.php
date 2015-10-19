@@ -99,12 +99,15 @@ class UserController extends Controller {
                 $users[$i]['photo'] = $faker->imageUrl($width = 200, $height = 200, 'cats');
             }
         }
-
-        // figure out how to let users download/access this:
         
-        $fp = fopen('randomusers.json', 'w');
-        fwrite($fp, json_encode($users));
-        fclose($fp);
+        $json = fopen('randomusers.json', 'w');
+        fwrite($json, json_encode($users));
+        fclose($json);
+
+        $csv = new \SplFileObject('randomusers.csv', 'w');
+        foreach ($users as $user) {
+            $csv->fputcsv($user);
+        }
 
         return view('users')->with('users', $users)->with('formdata', $formdata);
     }

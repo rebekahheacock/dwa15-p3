@@ -63,7 +63,11 @@
 
 			@if(isset($users))
 				<div class="users">
-				<p class="json"><a href="<?php echo url(); ?>/randomusers.json" target="_blank" class="btn btn-default">Download results as JSON</a></p>
+				<p class="donwloads">
+					Download results as: 
+					<a href="<?php echo url(); ?>/randomusers.json" target="_blank" class="btn btn-default">JSON</a>
+					<a href="<?php echo url(); ?>/randomusers.csv" target="_blank" class="btn btn-default">CSV</a>
+				</p>
 		        	@foreach($users as $user) 
 		        		<div class="user">
 	        				@if(isset($user['photo']))
@@ -75,7 +79,7 @@
 								<div class="userinfo-nopic">
 	        				@endif
 	        				
-				        		<p class="name">{{ $user['name'] }} <small>{{ $user['username'] }}</small></p>
+				        		<p class="name">{{ $user['name'] }} <small>({{ $user['username'] }})</small></p>
 				        		@if(isset($user['profile']))
 				        			<p class="profile">{{ $user['profile']}}</p>
 				        		@endif
