@@ -112,3 +112,38 @@ label {
 .navbar-toggle {
 	background-color: #DDD2CE;
 }
+
+.user {
+	margin-bottom: 10px;
+}
+
+.user p {
+	margin: 0;
+	padding: 0;
+}
+
+.name {
+	font-size: 1.2em;
+}
+
+.user {
+	clear: both;
+
+}
+
+.users .user:not(:first-child) {
+	padding-top: 10px;
+}
+
+.profile {
+	font-style: italic;
+}
+
+.profilepic {
+	width: 200px;
+	float: left;
+}
+
+.userinfo	{
+	margin-left: 210px;
+}

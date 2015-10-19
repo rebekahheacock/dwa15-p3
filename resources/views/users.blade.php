@@ -62,30 +62,34 @@
 		<div class="col-md-9">
 
 			@if(isset($users))
+				<div class="users">
 		        	@foreach($users as $user) 
 		        		<div class="user">
-		        			@if(isset($user['photo']))
+	        				@if(isset($user['photo']))
 		        				<div class="profilepic">
 									<img class="profilepic" src="{{ $user['photo']}}">
 								</div>
 	        				@endif
-			        		<p>{{ $user['name'] }} / {{ $user['username'] }}</p>
-			        		<p>{{ $user['email'] }}</p>
-			        		@if(isset($user['birthday']))
-			        			<p>{{ $user['birthday'] }}</p>
-			        		@endif
-			        		@if(isset($user['streetaddress']))
-			        			<p>{{ $user['streetaddress'] }}<br>
-			        			   {{ $user['city'] }}, {{$user['state'] }} {{ $user['postcode'] }}</p>
-			        		@endif
-			        		@if(isset($user['phone']))
-			        			<p>{{ $user['phone']}}</p>
-			        		@endif
-			        		@if(isset($user['profile']))
-			        			<p>{{ $user['profile']}}</p>
-			        		@endif
+	        				<div class="userinfo">
+				        		<p class="name">{{ $user['name'] }} <small>{{ $user['username'] }}</small></p>
+				        		@if(isset($user['profile']))
+				        			<p class="profile">{{ $user['profile']}}</p>
+				        		@endif
+				        		<p class="email">{{ $user['email'] }}</p>
+				        		@if(isset($user['birthday']))
+				        			<p>{{ $user['birthday'] }}</p>
+				        		@endif
+				        		@if(isset($user['streetaddress']))
+				        			<p>{{ $user['streetaddress'] }}<br>
+				        			   {{ $user['city'] }}, {{$user['state'] }} {{ $user['postcode'] }}</p>
+				        		@endif
+				        		@if(isset($user['phone']))
+				        			<p>{{ $user['phone']}}</p>
+				        		@endif
+				        	</div>
 		        		</div>
 	        		@endforeach
+		    	</div>
 		    @endif
 		</div>
 @stop
