@@ -30,41 +30,15 @@ Allows users to download Random User Generator results as JSON or CSV, in additi
 	- icons from [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
 
 ## TODO
-- ~~install Laravel and get it running locally~~
-- ~~install Bootstrap using [these instructions](http://transmission.vehikl.com/adding-twitter-bootstrap-to-your-laravel-5-app/)~~
-- ~~install necessary packages~~
-- create subdomain & get in running on Digital Ocean
+- create subdomain & get it running on Digital Ocean
 - deploy to Digital Ocean
-- ~~create plan for routes/views/controllers~~
-- ~~create base template for site~~
-	- ~~homepage~~
-	- ~~lorem ipsum~~
-		- ~~form: specify # of paragraphs~~
-		- ~~return generated LI text~~
-		- ~~retain form inputs after submission~~
-	- ~~random user generator~~
-		- ~~form: # of users, whether to include birthday, password, profile text, photo?~~
-			- ~~automatically return: name, username, email~~
-		- ~~return optional birthday(s), email password(s), profile text, photo(s)~~
-		- ~~retain form inputs after submission~~
-- ~~customize error messages~~
-- ~~style error reporting~~
-- ~~style user output~~
-- ~~different output formats for user data~~
-	- ~~check CSV output~~
-- clean up code
-- better color scheme
+- review/clean up code
+- write demo script
+- record demo
+- update README
 
-## TODO IF TIME
-- ~~incorporate pwd generator~~
-	- ~~add to front page~~
-	- ~~add to navbar~~
-	- ~~port over form~~
-		- ~~include js~~
-	- ~~test input validation in laravel~~
-	- ~~password output~~
-	- ~~style password output~~
-- put everything on same page
-- permissions calculator
+## FUTURE PLANS
+- add permissions calculator
+
 
 
