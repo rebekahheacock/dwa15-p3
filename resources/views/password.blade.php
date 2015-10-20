@@ -75,11 +75,23 @@
 
 			<div class="col-md-9">
 
-				@if(isset($password_string))
-					<div id="password">
-			        	<p>{{ $password_string }}<p>
-			        </div>
-			    @endif
+				<div class="password">
+
+					@if(isset($password_string))
+				        	<p>{{ $password_string }}<p>
+				    @else
+				    	<p>********</p>
+				    @endif
+
+				    @if($formdata['dino'] == 'checked')
+				    	<img src="img/dino.png" alt="Dinosaur" class="password-img">
+				    	<p class="caption"><a href="https://thenounproject.com/term/dinosaur/161852">Dinosaur icon</a> by <a href="https://thenounproject.com/goodmajr2827">Jennifer Goodman</a> on the <a href="https://thenounproject.com/">Noun Project</a>. Used under a <a href="http://creativecommons.org/licenses/by/3.0/us/">CC-BY 3.0</a> license.</p>
+				    @else
+					    <a href="http://xkcd.com/936/"><img src="img/xkcd_password_strength.png" alt="XKCD Password Strength" class="password-img" title="Original hovertext: 'To anyone who understands information theory and security and is in an infuriating argument with someone who does not (possibly involving mixed case), I sincerely apologize.'"></a>
+					    <p class="caption"><a href="http://xkcd.com/936/">via XKCD</a></p>
+					@endif
+
+			    </div>
 
 		    </div>
 		</div>

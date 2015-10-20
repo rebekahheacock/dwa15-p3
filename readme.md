@@ -58,8 +58,9 @@ Allows users to download Random User Generator results as JSON or CSV, in additi
 - incorporate pwd generator
 	- ~~port over form~~
 		- ~~include js~~
-	- test input validation in laravel
-	- password output
+	- ~~test input validation in laravel~~
+	- ~~password output~~
+	- style password output
 - put everything on same page
 - permissions calculator
 

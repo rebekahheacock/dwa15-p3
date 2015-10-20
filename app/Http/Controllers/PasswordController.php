@@ -151,9 +151,15 @@ class PasswordController extends Controller {
 
             for ($i = 0; $i < $formdata['numwords']; $i++) {
                 if ($i == $dino_place) {
-                    $password_string = $password_string . strtoupper($this->dinos[rand(0, (count($this->dinos) - 1))]) . $separator;
+                    $password_string = $password_string . strtoupper($this->dinos[rand(0, (count($this->dinos) - 1))]);
+                    if ($i < ($formdata['numwords'] - 1)) {
+                        $password_string .= $separator;
+                    }
                 } else {
-                    $password_string = $password_string . strtolower($this->words[rand(0, (count($this->words) - 1))])  . $separator;
+                    $password_string = $password_string . strtolower($this->words[rand(0, (count($this->words) - 1))]);
+                    if ($i < ($formdata['numwords'] - 1)) {
+                        $password_string .= $separator;
+                    }
                 }
             }
         }
@@ -167,12 +173,12 @@ class PasswordController extends Controller {
             }
         }
 
-        if ($num == 'yes') {
-            $password_string = $password_string . rand(0, 9);
+        if ($num == 'on') {
+            $password_string = $password_string . $separator . rand(0, 9);
         }
 
-        if ($symbol == 'yes') {
-            $password_string = $password_string . $this->symbols[rand(0, (count($this->words) - 1))];
+        if ($symbol == 'on') {
+            $password_string = $password_string . $separator . $this->symbols[rand(0, (count($this->symbols) - 1))];
         }
         
 
