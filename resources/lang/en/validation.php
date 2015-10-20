@@ -103,6 +103,15 @@ return [
             'min'       => 'You must request at least 1 user.',
             'max'       => 'The max number of users is 10.'
         ],
+        'separator' => [
+            'required'  => 'You must specify a separator.',
+        ],
+        'numwords' => [
+            'required'  => 'You must specify a number of words.',
+            'numeric'   => 'You must enter a number.',
+            'min'       => 'Your password must be at least 1 word long.',
+            'max'       => 'The max number of words is 9.'
+        ]
     ],
 
     /*

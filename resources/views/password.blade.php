@@ -17,14 +17,12 @@
 
 			<div class="col-md-3">
 				@if(count($errors) > 0)
-				    <ul>
-				        @foreach ($errors->all() as $error) 
-				            <div class="alert alert-danger alert-dismissible fade in" role="alert">
-			  					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			  					{{ $error }}
-							</div>
-				        @endforeach
-				    </ul>
+			        @foreach ($errors->all() as $error) 
+			            <div class="alert alert-danger alert-dismissible fade in" role="alert">
+		  					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  					{{ $error }}
+						</div>
+			        @endforeach
 				@endif
 
 				<form id="newpassword" action="password" method="POST">
