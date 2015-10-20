@@ -16,6 +16,8 @@ Includes both HTML5 validation and Laravel-based validation with custom error me
 
 Allows users to download Random User Generator results as JSON or CSV, in addition to viewing on page.
 
+Random cat photos!
+
 
 ## Outside Resources
 
