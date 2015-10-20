@@ -1,5 +1,8 @@
+/* BASE STYLES */
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Oswald', sans-serif;
+	color: #5E0525;
 }
 
 p {
@@ -7,15 +10,30 @@ p {
 }
 
 a {
-	color: #434C67;
+	color: #FC7C3D;
 }
 
-.subhead {
-	padding-top: 50px;
+a:hover {
+	color: #CE0027;
 }
+
+label {
+	font-weight: normal;
+}
+
+.checkbox {
+	margin-top: 0px;
+}
+
+.form-control {
+	width: auto;
+	display: inline;
+}
+
+/* HEADER & NAV */
 
 nav {
-	background: #F7EFED;
+	background: #EAAE4E;
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -27,36 +45,49 @@ nav {
 	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
 	font-size: 0.8em;
+	color: #FFF;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-	background: #DDD2CE;
+	background: #FC7C3D;
 }
 
 a.navbar-brand {
-	color: #333;
+	color: #740025;
+	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
-	font-size: 24px;
+	letter-spacing: 0.1em;
+	background-color: #FC7C3D;
 }
 
-a.navbar-brand:hover {
-	color: #23527c;
+.subhead {
+	padding-top: 50px;
 }
+
+.icon-bar {
+	background-color: #EAAE4E;
+}
+
+.navbar-toggle {
+	background-color: #F6EFED;
+}
+
+/* HOME PAGE */
 
 .home {
-	background: #0D152E;
+	background: #5E0525;
 	text-align: center;
 	position: relative;
 	padding: 2em 0 2em 0;
 }
 
 .cogs {
-	color: #1B2440;
+	color: #740025;
 	font-size: 4vw;
 }
 
 .home-header {
-	color: #5E6782;
+	color: #FFF;
 	font-family: 'Oswald', sans-serif;
 	font-size: 7vw;
 	text-transform: uppercase;
@@ -65,6 +96,7 @@ a.navbar-brand:hover {
 	left: 0;
 	right: 0;
 	margin: auto;
+	letter-spacing: 0.1em;
 }
 
 .apps .col-md-4 {
@@ -73,7 +105,7 @@ a.navbar-brand:hover {
 }
 
 .apps i {
-	color: #434C67;
+	color: #EAAE4E;
 }
 
 .apps p {
@@ -81,16 +113,25 @@ a.navbar-brand:hover {
 }
 
 a.tile {
-	color: #333333;
 	display: block;
 	padding: 1em;
 }
 
 a.tile:hover {
-	color: #333333;
 	background: #EEE;
 	text-decoration: none;
 }
+
+a.tile p, a.tile p:hover {
+	color: #333333;
+}
+
+a.tile:hover h1 {
+	color: #FC7C3D;
+}
+
+
+/* FOOTER */
 
 footer {
 	position: absolute;
@@ -101,17 +142,7 @@ footer {
 	height: 50px;
 }
 
-label {
-	font-weight: normal;
-}
-
-.icon-bar {
-	background-color: #F6EFED;
-}
-
-.navbar-toggle {
-	background-color: #DDD2CE;
-}
+/* USER GENERATOR */
 
 .user {
 	margin-bottom: 10px;
@@ -148,6 +179,8 @@ label {
 	margin-left: 210px;
 }
 
+/* PASSWORD GENERATOR */
+
 #newpassword fieldset {
 	border: 1px solid #c0c0c0;
     margin: 0 2px;
@@ -162,21 +195,12 @@ label {
 	width: auto;
 }
 
-.checkbox {
-	margin-top: 0px;
-}
-
-.form-control {
-	width: auto;
-	display: inline;
-}
-
 .password {
 	text-align: center;
 }
 
 .password p {
-    color: #434C67;
+    color: #CE0027;
     font-size: 24px;
     font-family: 'Oswald', sans-serif;
     padding: 0;

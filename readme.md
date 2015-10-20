@@ -51,8 +51,9 @@ Allows users to download Random User Generator results as JSON or CSV, in additi
 - ~~style error reporting~~
 - ~~style user output~~
 - ~~different output formats for user data~~
-	- check CSV output
+	- ~~check CSV output~~
 - clean up code
+- better color scheme
 
 ## TODO IF TIME
 - ~~incorporate pwd generator~~

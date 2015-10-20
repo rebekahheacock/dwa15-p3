@@ -22,7 +22,7 @@
 			        <span class="icon-bar"></span>
 		      	</button>
 				<a class="navbar-brand" href="<?php echo url(); ?>">
-					<i class="fa fa-cogs fa-lg"></i> Developer's Best Friend
+					<i class="fa fa-cogs fa"></i> developer's best friend
 				</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
