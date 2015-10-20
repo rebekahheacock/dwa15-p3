@@ -11,7 +11,7 @@
         "rap2hpoutre/laravel-log-viewer": "^0.4.3",
         "barryvdh/laravel-debugbar": "^2.0",
         "badcow/lorem-ipsum": "dev-master",
-        "fzaninotto/faker": "~1.4",
+        "fzaninotto/faker": "~1.4"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
