@@ -18,6 +18,8 @@ Allows users to download Random User Generator results as JSON or CSV, in additi
 
 Random cat photos!
 
+Users: minimum age of 13
+
 
 ## Outside Resources
 

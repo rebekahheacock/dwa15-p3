@@ -14,7 +14,10 @@ class UserController extends Controller {
         # Put anything here that should happen before any of the other actions
     }
 
-    private $formdata = [
+    private $formdata = [];
+
+    private function formdataReset() {
+        $this->formdata = [
         'numusers' => '',
         'phoneyes' => '',
         'birthdayyes' => '',
@@ -25,11 +28,14 @@ class UserController extends Controller {
         'profileyes' => '',
         'photoyes' => '',
         ];
+    }
 
     /**
     * Responds to requests to GET /users
     */
     public function getIndex() {
+        $this->formdataReset();
+        \Debugbar::info($this->formdata);
         return view('users')->with('formdata',$this->formdata);
     }
 
@@ -37,41 +43,37 @@ class UserController extends Controller {
      * Responds to requests to POST /users
      */
     public function postIndex(Request $request) {
+        $this->formdataReset();
+
         $faker = Faker::create();
 
         $this->validate($request, 
             ['numusers' => 'required|numeric|min:1|max:10']
         );
 
-        $formdata['addressyes'] = '';
-        $formdata['phoneyes'] = '';
-        $formdata['birthdayyes'] = '';
-        $formdata['profileyes'] = '';
-        $formdata['photoyes'] = '';
-
         $numusers = $request->input('numusers');
 
-        $formdata['numusers'] = $numusers;
+        $this->formdata['numusers'] = $numusers;
 
         $address = $request->input('address');
         if ($address == 'on') {
-            $formdata['addressyes'] = 'checked';   
+            $this->formdata['addressyes'] = 'checked';   
         }
         $phone = $request->input('phone');
         if ($phone == 'on') {
-            $formdata['phoneyes'] = 'checked';
+            $this->formdata['phoneyes'] = 'checked';
         }
         $birthday = $request->input('birthday');
         if ($birthday == 'on') {
-            $formdata['birthdayyes'] = 'checked';
+            $this->formdata['birthdayyes'] = 'checked';
         }
         $profile = $request->input('profile');
         if ($profile == 'on') {
-            $formdata['profileyes'] = 'checked';
+            $this->formdata['profileyes'] = 'checked';
         }
         $photo = $request->input('photo');
         if ($photo == 'on') {
-            $formdata['photoyes'] = 'checked';
+            $this->formdata['photoyes'] = 'checked';
         }
 
         for ($i = 0; $i < $numusers; $i++) {
@@ -111,6 +113,6 @@ class UserController extends Controller {
             $csv->fputcsv($user);
         }
 
-        return view('users')->with('users', $users)->with('formdata', $formdata);
+        return view('users')->with('users', $users)->with('formdata', $this->formdata);
     }
 }
