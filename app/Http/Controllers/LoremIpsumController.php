@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use \Badcow\LoremIpsum\Generator;
+
 class LoremIpsumController extends Controller {
 
     public function __construct() {
@@ -29,10 +31,8 @@ class LoremIpsumController extends Controller {
         );
         
         $grafs = $request->input('grafs');
-        $generator = new \Badcow\LoremIpsum\Generator();
+        $generator = new Generator();
         $paragraphs = $generator->getParagraphs($grafs);
-        // \Debugbar::info($generator);
-        // \Debugbar::info($paragraphs);
         return view('loremipsum')->with('paragraphs', $paragraphs)->with('grafs', $grafs);
     }
 }

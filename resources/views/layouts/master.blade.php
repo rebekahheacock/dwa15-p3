@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>@yield('title','RHJ: Developer\'s Best Friend')</title>
-	<link href='https://fonts.googleapis.com/css?family=Oswald|Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald%7CLato' rel='stylesheet' type='text/css'>
 	<link href="css/app.css" type="text/css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link href="css/p3.css" type="text/css" rel="stylesheet">

@@ -29,8 +29,8 @@
 			<form method="POST" action="users">
 			    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 			    <label for="numusers">Number of users (max 10)</label>
-			    <input type="number" name="numusers" class="form-control" min="1" max="10" value="<?php echo $formdata['numusers']; ?>" required>
-				 <div class="checkbox">
+			    <input type="number" id="numusers" name="numusers" class="form-control" min="1" max="10" value="<?php echo $formdata['numusers']; ?>" required>
+				<div class="checkbox">
 				    <label>
 				      <input type="checkbox" <?php echo $formdata['addressyes']; ?> name="address"> Include a mailing address
 				    </label>
@@ -79,25 +79,29 @@
 								<div class="userinfo-nopic">
 	        				@endif
 	        				
-				        		<p class="name">{{ $user['name'] }} <small>({{ $user['username'] }})</small></p>
-				        		@if(isset($user['profile']))
-				        			<p class="profile">{{ $user['profile']}}</p>
-				        		@endif
-				        		<p class="email">{{ $user['email'] }}</p>
-				        		@if(isset($user['birthday']))
-				        			<p>{{ $user['birthday'] }}</p>
-				        		@endif
-				        		@if(isset($user['streetaddress']))
-				        			<p>{{ $user['streetaddress'] }}<br>
-				        			   {{ $user['city'] }}, {{$user['state'] }} {{ $user['postcode'] }}</p>
-				        		@endif
-				        		@if(isset($user['phone']))
-				        			<p>{{ $user['phone']}}</p>
-				        		@endif
-				        	</div>
+					        		<p class="name">{{ $user['name'] }} <small>({{ $user['username'] }})</small></p>
+					        		@if(isset($user['profile']))
+					        			<p class="profile">{{ $user['profile']}}</p>
+					        		@endif
+					        		<p class="email">{{ $user['email'] }}</p>
+					        		@if(isset($user['birthday']))
+					        			<p>{{ $user['birthday'] }}</p>
+					        		@endif
+					        		@if(isset($user['streetaddress']))
+					        			<p>{{ $user['streetaddress'] }}<br>
+					        			   {{ $user['city'] }}, {{$user['state'] }} {{ $user['postcode'] }}</p>
+					        		@endif
+					        		@if(isset($user['phone']))
+					        			<p>{{ $user['phone']}}</p>
+					        		@endif
+					        	</div>
 		        		</div>
 	        		@endforeach
 		    	</div>
 		    @endif
+
 		</div>
+		
+	</div>
+</div>
 @stop

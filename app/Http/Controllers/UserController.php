@@ -14,21 +14,23 @@ class UserController extends Controller {
         # Put anything here that should happen before any of the other actions
     }
 
+    private $formdata = [
+        'numusers' => '',
+        'phoneyes' => '',
+        'birthdayyes' => '',
+        'profileyes' => '',
+        'photoyes' => '',
+        'addressyes' => '',
+        'birthdayyes' => '',
+        'profileyes' => '',
+        'photoyes' => '',
+        ];
+
     /**
     * Responds to requests to GET /users
     */
     public function getIndex() {
-        $formdata['numusers'] = '';
-        $formdata['phoneyes'] = '';
-        $formdata['birthdayyes'] = '';
-        $formdata['profileyes'] = '';
-        $formdata['photoyes'] = '';
-        $formdata['addressyes'] = '';
-        $formdata['phoneyes'] = '';
-        $formdata['birthdayyes'] = '';
-        $formdata['profileyes'] = '';
-        $formdata['photoyes'] = '';
-        return view('users')->with('formdata',$formdata);
+        return view('users')->with('formdata',$this->formdata);
     }
 
     /**

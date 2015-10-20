@@ -28,7 +28,7 @@
 				<form method="POST" action="loremipsum">
 				    <input type="hidden" name="_token" value="{{ csrf_token() }}">
 				    <label for="grafs">Number of paragraphs (max 10)</label>
-				    <input type="number" name="grafs" class="form-control" value="<?php echo $grafs; ?>" min="1" max="10" required>
+				    <input type="number" id="grafs" name="grafs" class="form-control" value="<?php echo $grafs; ?>" min="1" max="10" required>
 					<button type="submit" class="btn btn-default" title="Let's do it">Faciamus hoc (let's do it)</button>
 				</form>
 			</div>
@@ -37,8 +37,9 @@
 
 				@if(isset($paragraphs))
 					<div id="loremipsumtext">
-			        	<p>
-			        	<?php echo implode('<p>', $paragraphs); ?>
+						@foreach($paragraphs as $paragraph)
+							<p>{{ $paragraph }}</p>
+						@endforeach
 			        </div>
 			    @endif
 
