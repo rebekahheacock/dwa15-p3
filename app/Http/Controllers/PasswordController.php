@@ -84,12 +84,19 @@ class PasswordController extends Controller {
         $formdata['dino'] = ''; 
 
         $this->validate($request, [
-            'numwords' => 'required|numeric|min:1|max:9',
             'separator' => 'required'
             ]
         );
 
-        $fancy = $request->input('fancy', 'notfancy');
+        $fancy = $request->input('fancy');
+
+        if ($fancy != 'memorable') {
+             $this->validate($request, [
+                'numwords' => 'required|numeric|min:1|max:9',
+                ]
+            ); 
+        }
+
         if ($fancy == 'memorable') {
             $formdata['memorable'] = 'checked';
         }
@@ -152,7 +159,10 @@ class PasswordController extends Controller {
         }
         else {
             for ($i = 0; $i < $formdata['numwords']; $i++) {
-                $password_string = $password_string . $this->words[rand(0, (count($this->words) - 1))] . $separator;
+                $password_string = $password_string . $this->words[rand(0, (count($this->words) - 1))];
+                if ($i < ($formdata['numwords'] - 1)) {
+                    $password_string .= $separator;
+                }
                 $password_string = strtolower($password_string);
             }
         }

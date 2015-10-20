@@ -1,4 +1,4 @@
-3// based on http://stackoverflow.com/questions/5818415/enable-disable-submit-button-based-on-radio-buttons/5818714#5818714
+// based on http://stackoverflow.com/questions/5818415/enable-disable-submit-button-based-on-radio-buttons/5818714#5818714
 
 $(function () {
     var $numwords = $('input[name=numwords]');

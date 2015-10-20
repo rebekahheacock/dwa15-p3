@@ -62,10 +62,10 @@
 					<fieldset>
 						<legend>Let's get fancy</legend>
 					    <label for="memorable" class="radio-inline">
-					      <input type="radio" <?php echo $formdata['memorable']; ?> name="fancy" id="memorable"> Make it memorable <small>Four words in grammatically correct order</small>
+					    	<input type="radio" <?php echo $formdata['memorable']; ?> name="fancy" id="memorable" value="memorable"> Make it memorable<br><small>Four words in grammatically correct order</small>
 					    </label><br>
 					    <label for="dino" class="radio-inline">
-					      <input type="radio" <?php echo $formdata['dino']; ?> name="fancy" id="dino"> Dinosaurs! <small>Include a <a href="https://github.com/dariusk/corpora/blob/master/data/animals/dinosaurs.json">real dinosaur name</a> in the password</small>
+					    	<input type="radio" <?php echo $formdata['dino']; ?> name="fancy" id="dino" value="dino"> Dinosaurs!<br><small>Include a <a href="https://github.com/dariusk/corpora/blob/master/data/animals/dinosaurs.json">real dinosaur name</a> in the password</small>
 					    </label>
 					</fieldset>
 					
