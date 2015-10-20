@@ -63,7 +63,7 @@
 
 			@if(isset($users))
 				<div class="users">
-				<p class="donwloads">
+				<p>
 					Download results as: 
 					<a href="randomusers.json" class="btn btn-default" download>JSON</a>
 					<a href="randomusers.csv" class="btn btn-default" download>CSV</a>

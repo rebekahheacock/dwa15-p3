@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::controller('/loremipsum', 'LoremIpsumController');
 Route::controller('/users', 'UserController');
-Route::controller('/password', 'XKCDPasswordController');
+Route::controller('/password', 'PasswordController');
 
 if(App::environment('local')) {
     Route::get('/logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

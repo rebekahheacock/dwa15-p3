@@ -27,7 +27,7 @@
 				    </ul>
 				@endif
 
-				<form id="newpassword" action="xckdpassword" method="POST">
+				<form id="newpassword" action="password" method="POST">
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<label for="numwords">Number of words (max 9)</label>
 					<input type="number" name="numwords" class="form-control" min="1" max="9" value="<?php echo $formdata['numwords']; ?>" required> 
@@ -65,7 +65,7 @@
 					      <input type="radio" <?php echo $formdata['memorable']; ?> name="fancy" id="memorable"> Make it memorable <small>Four words in grammatically correct order</small>
 					    </label><br>
 					    <label for="dino" class="radio-inline">
-					      <input type="radio" <?php echo $formdata['dino']; ?> name="fancy" id="dinosaurs"> Dinosaurs! <small>Include a <a href="https://github.com/dariusk/corpora/blob/master/data/animals/dinosaurs.json">real dinosaur name</a> in the password</small>
+					      <input type="radio" <?php echo $formdata['dino']; ?> name="fancy" id="dino"> Dinosaurs! <small>Include a <a href="https://github.com/dariusk/corpora/blob/master/data/animals/dinosaurs.json">real dinosaur name</a> in the password</small>
 					    </label>
 					</fieldset>
 					
@@ -77,10 +77,9 @@
 
 			<div class="col-md-9">
 
-				@if(isset($paragraphs))
-					<div id="loremipsumtext">
-			        	<p>
-			        	<?php echo implode('<p>', $paragraphs); ?>
+				@if(isset($password_string))
+					<div id="password">
+			        	<p>{{ $password_string }}<p>
 			        </div>
 			    @endif
 
