@@ -67,7 +67,7 @@ a.navbar-brand:hover {
 	margin: auto;
 }
 
-.apps .col-md-3 {
+.apps .col-md-4 {
 	text-align: center;
 	padding-top: 5%;
 }
@@ -88,7 +88,7 @@ a.tile {
 
 a.tile:hover {
 	color: #333333;
-	background: #DDD2CE;
+	background: #EEE;
 	text-decoration: none;
 }
 

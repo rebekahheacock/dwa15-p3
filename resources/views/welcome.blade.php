@@ -25,20 +25,26 @@
 
     <div class="container-fluid">
         <div class="row apps">
-            <div class="col-md-3 col-md-offset-3">
+            <div class="col-md-4">
                 <a class="tile" href="loremipsum">
                     <i class="fa fa-align-justify fa-5x"></i>
                     <h1>Lorem Ipsum Generator</h1>
                     <p>Paragraphs of filler text.</p>
                 </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <a class="tile" href="users">
                     <i class="fa fa-users fa-5x"></i>
                     <h1>Random User Generator</h1>
                     <p>Fake users to help test your web app.</p>
                 </a>
-
+            </div>
+             <div class="col-md-4">
+                <a class="tile" href="password">
+                    <i class="fa fa-key fa-5x"></i>
+                    <h1>Password Generator</h1>
+                    <p>XKCD-style passwords, with dinosaurs.</p>
+                </a>
             </div>
         </div>
     </div>

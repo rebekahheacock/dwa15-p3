@@ -29,6 +29,7 @@
 				<ul class="nav navbar-nav navbar-right list-unstyled list-inline">
 					<li><a href="loremipsum"><i class="fa fa-align-justify"></i> Lorem Ipsum</a></li>
 					<li><a href="users"><i class="fa fa-users"></i> User Generator</a></li>
+					<li><a href="password"><i class="fa fa-key"></i> Password Generator</a></li>
 				</ul>	
 			</div>
 		</nav>

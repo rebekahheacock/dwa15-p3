@@ -55,9 +55,9 @@ Allows users to download Random User Generator results as JSON or CSV, in additi
 - clean up code
 
 ## TODO IF TIME
-- incorporate pwd generator
-	- add to front page
-	- add to navbar
+- ~~incorporate pwd generator~~
+	- ~~add to front page~~
+	- ~~add to navbar~~
 	- ~~port over form~~
 		- ~~include js~~
 	- ~~test input validation in laravel~~
