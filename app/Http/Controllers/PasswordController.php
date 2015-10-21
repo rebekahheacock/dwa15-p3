@@ -71,25 +71,24 @@ class PasswordController extends Controller {
      */
     public function postIndex(Request $request) {
 
-
-        $this->validate($request, [
-            'separator' => 'required'
-            ]
-        );
-
         $fancy = $request->input('fancy');
 
-        if ($fancy != 'memorable') {
-             $this->validate($request, [
+        if ($fancy == 'memorable') {
+            $this->validate($request, [
+                'separator' => 'required'
+                ]
+            ); 
+            $this->formdata['memorable'] = 'checked';
+        }
+        else {
+            $this->validate($request, [
                 'numwords' => 'required|numeric|min:1|max:9',
+                'separator' => 'required'
                 ]
             ); 
         }
 
-        if ($fancy == 'memorable') {
-            $this->formdata['memorable'] = 'checked';
-        }
-        else if ($fancy == 'dino') {
+        if ($fancy == 'dino') {
             $this->formdata['dino'] = 'checked';
         }
 
