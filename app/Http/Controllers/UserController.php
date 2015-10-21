@@ -96,8 +96,11 @@ class UserController extends Controller {
                 $users[$i]['photo'] = $faker->imageUrl($width = 200, $height = 200, 'cats');
             }
         }
+
+        $jsonpath = app_path();
+        $jsonpath .= 'public/randomusers.json';
         
-        $json = fopen('public/randomusers.json', 'w');
+        $json = fopen($jsonpath, 'w');
         fwrite($json, json_encode($users));
         fclose($json);
 
