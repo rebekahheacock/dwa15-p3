@@ -17,6 +17,8 @@
 
 		<div class="col-md-3">
 
+			<?php echo app_path(); ?>
+
 			@if(count($errors) > 0)
 		        @foreach ($errors->all() as $error)
 			    	<div class="alert alert-danger alert-dismissible fade in" role="alert">
