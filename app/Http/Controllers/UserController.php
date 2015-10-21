@@ -97,8 +97,6 @@ class UserController extends Controller {
             }
         }
         
-        $jsonpath = public_path();
-        $jsonpath .= '/downloads/randomusers.json';
         $json = fopen('downloads/randomusers.json', 'w');
         fwrite($json, json_encode($users));
         fclose($json);
