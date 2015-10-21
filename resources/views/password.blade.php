@@ -28,7 +28,7 @@
 				<form id="newpassword" action="password" method="POST">
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<label for="numwords">Number of words (max 9)</label>
-					<input type="number" name="numwords" class="form-control" min="1" max="9" value="<?php echo $formdata['numwords']; ?>" required> 
+					<input type="number" id="numwords" name="numwords" class="form-control" min="1" max="9" value="<?php echo $formdata['numwords']; ?>" required> 
 					<div class="checkbox">
 					    <label>
 					      <input type="checkbox" <?php echo $formdata['numyes']; ?> name="num"> Include a number

@@ -36,7 +36,7 @@ Users: minimum age of 13
 ## TODO
 - create subdomain & get it running on Digital Ocean
 - deploy to Digital Ocean
-- review/clean up code
+- ~~review/clean up code~~
 - write demo script
 - record demo
 - update README

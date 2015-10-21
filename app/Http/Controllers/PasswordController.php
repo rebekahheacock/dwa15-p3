@@ -10,24 +10,36 @@ use View;
 
 class PasswordController extends Controller {
 
-    public function scrape($json_file, $word_type) {
+    private function scrape($json_file, $word_type) {
             $rawdata = file_get_contents($json_file);
             $object = json_decode($rawdata, true);
             return $object[$word_type];
     }
 
-    public $separators = [' ', '-', '.', ''];
-    public $symbols = array('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=');
+    private $separators = [' ', '-', '.', ''];
+    private $symbols = array('!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=');
 
-    public $nouns;
-    public $adverbs;
-    public $adjectives;
-    public $allverbs;
-    public $dinos;
-    public $verbs;
-    public $words;
+    private $nouns;
+    private $adverbs;
+    private $adjectives;
+    private $allverbs;
+    private $dinos;
+    private $verbs;
+    private $words;
 
-   
+    private $formdata = [
+        'numwords' => '',
+        'numyes' => '',
+        'symbolyes' => '',
+        'memorable' => '',
+        'separator_space' => '',
+        'separator_dash' => '',
+        'separator_dot' => '',
+        'separator_none' => '',
+        'separator_random' => '',
+        'dino' => '',
+    ];
+
 
     public function __construct() {
         # Put anything here that should happen before any of the other actions
@@ -51,19 +63,7 @@ class PasswordController extends Controller {
     * Responds to requests to GET /password
     */
     public function getIndex() {
-        $formdata['numwords'] = '';
-        $formdata['numyes'] = '';
-        $formdata['symbolyes'] = '';
-        $formdata['memorable'] = '';
-        $formdata['separator_space'] = ''; 
-        $formdata['separator_dash'] = ''; 
-        $formdata['separator_dot'] = '';   
-        $formdata['separator_none'] = '';
-        $formdata['separator_random'] = ''; 
-        $formdata['memorable'] = '';
-        $formdata['dino'] = ''; 
-
-        return view('password')->with('formdata',$formdata);
+        return view('password')->with('formdata',$this->formdata);
     }
 
     /**
@@ -71,17 +71,6 @@ class PasswordController extends Controller {
      */
     public function postIndex(Request $request) {
 
-        $formdata['numwords'] = '';
-        $formdata['numyes'] = '';
-        $formdata['symbolyes'] = '';
-        $formdata['memorable'] = '';
-        $formdata['separator_space'] = ''; 
-        $formdata['separator_dash'] = ''; 
-        $formdata['separator_dot'] = '';   
-        $formdata['separator_none'] = '';
-        $formdata['separator_random'] = ''; 
-        $formdata['memorable'] = '';
-        $formdata['dino'] = ''; 
 
         $this->validate($request, [
             'separator' => 'required'
@@ -98,43 +87,43 @@ class PasswordController extends Controller {
         }
 
         if ($fancy == 'memorable') {
-            $formdata['memorable'] = 'checked';
+            $this->formdata['memorable'] = 'checked';
         }
         else if ($fancy == 'dino') {
-            $formdata['dino'] = 'checked';
+            $this->formdata['dino'] = 'checked';
         }
 
-        $formdata['numwords'] = $request->input('numwords');
+        $this->formdata['numwords'] = $request->input('numwords');
         
         $num = $request->input('num');
         if ($num == 'on') {
-            $formdata['numyes'] = 'checked';   
+            $this->formdata['numyes'] = 'checked';   
         }
 
         $symbol = $request->input('symbol');
         if ($symbol == 'on') {
-            $formdata['symbolyes'] = 'checked';   
+            $this->formdata['symbolyes'] = 'checked';   
         }
 
         $separator = $request->input('separator');
         if ($separator == 'space') {
-            $formdata['separator_space'] = 'checked';
+            $this->formdata['separator_space'] = 'checked';
             $separator = $this->separators[0];
         }
         else if ($separator == 'dash') {
-            $formdata['separator_dash'] = 'checked';
+            $this->formdata['separator_dash'] = 'checked';
             $separator = $this->separators[1];
         }
         else if ($separator == 'dot') {
-            $formdata['separator_space'] = 'checked';
+            $this->formdata['separator_space'] = 'checked';
             $separator = $this->separators[2];
         }
         else if ($separator == 'none') {
-            $formdata['separator_none'] = 'checked';
+            $this->formdata['separator_none'] = 'checked';
             $separator = $this->separators[3];
         } 
         else if ($separator == 'random') {
-            $formdata['separator_random'] = 'checked';
+            $this->formdata['separator_random'] = 'checked';
             $separator = $this->separators[rand(0, (count($this->separators) - 1))];
         }
 
@@ -147,26 +136,26 @@ class PasswordController extends Controller {
                 . $this->adverbs[rand(0, (count($this->adverbs) - 1))];
         }
         else if ($fancy == 'dino') {
-            $dino_place = rand(0, ($formdata['numwords'] - 1));
+            $dino_place = rand(0, ($this->formdata['numwords'] - 1));
 
-            for ($i = 0; $i < $formdata['numwords']; $i++) {
+            for ($i = 0; $i < $this->formdata['numwords']; $i++) {
                 if ($i == $dino_place) {
                     $password_string = $password_string . strtoupper($this->dinos[rand(0, (count($this->dinos) - 1))]);
-                    if ($i < ($formdata['numwords'] - 1)) {
+                    if ($i < ($this->formdata['numwords'] - 1)) {
                         $password_string .= $separator;
                     }
                 } else {
                     $password_string = $password_string . strtolower($this->words[rand(0, (count($this->words) - 1))]);
-                    if ($i < ($formdata['numwords'] - 1)) {
+                    if ($i < ($this->formdata['numwords'] - 1)) {
                         $password_string .= $separator;
                     }
                 }
             }
         }
         else {
-            for ($i = 0; $i < $formdata['numwords']; $i++) {
+            for ($i = 0; $i < $this->formdata['numwords']; $i++) {
                 $password_string = $password_string . $this->words[rand(0, (count($this->words) - 1))];
-                if ($i < ($formdata['numwords'] - 1)) {
+                if ($i < ($this->formdata['numwords'] - 1)) {
                     $password_string .= $separator;
                 }
                 $password_string = strtolower($password_string);
@@ -182,6 +171,6 @@ class PasswordController extends Controller {
         }
         
 
-        return view('password')->with('formdata', $formdata)->with('password_string', $password_string);
+        return view('password')->with('formdata', $this->formdata)->with('password_string', $password_string);
     }
 }

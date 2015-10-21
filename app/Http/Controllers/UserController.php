@@ -14,28 +14,22 @@ class UserController extends Controller {
         # Put anything here that should happen before any of the other actions
     }
 
-    private $formdata = [];
-
-    private function formdataReset() {
-        $this->formdata = [
-        'numusers' => '',
-        'phoneyes' => '',
-        'birthdayyes' => '',
-        'profileyes' => '',
-        'photoyes' => '',
-        'addressyes' => '',
-        'birthdayyes' => '',
-        'profileyes' => '',
-        'photoyes' => '',
-        ];
-    }
+    private $formdata = [
+    'numusers' => '',
+    'phoneyes' => '',
+    'birthdayyes' => '',
+    'profileyes' => '',
+    'photoyes' => '',
+    'addressyes' => '',
+    'birthdayyes' => '',
+    'profileyes' => '',
+    'photoyes' => '',
+    ];
 
     /**
     * Responds to requests to GET /users
     */
     public function getIndex() {
-        $this->formdataReset();
-        \Debugbar::info($this->formdata);
         return view('users')->with('formdata',$this->formdata);
     }
 
@@ -43,7 +37,6 @@ class UserController extends Controller {
      * Responds to requests to POST /users
      */
     public function postIndex(Request $request) {
-        $this->formdataReset();
 
         $faker = Faker::create();
 

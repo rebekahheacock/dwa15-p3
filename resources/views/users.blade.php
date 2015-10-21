@@ -72,18 +72,18 @@
 		        		<div class="user">
 	        				@if(isset($user['photo']))
 		        				<div class="profilepic">
-									<img class="profilepic" src="{{ $user['photo']}}">
+									<img class="profilepic" src="{{ $user['photo']}}" alt="profile pic">
 								</div>
 								<div class="userinfo-pic">
 							@else
 								<div class="userinfo-nopic">
 	        				@endif
 	        				
-					        		<p class="name">{{ $user['name'] }} <small>({{ $user['username'] }})</small></p>
+					        		<p class="username">{{ $user['name'] }} <small>({{ $user['username'] }})</small></p>
 					        		@if(isset($user['profile']))
 					        			<p class="profile">{{ $user['profile']}}</p>
 					        		@endif
-					        		<p class="email">{{ $user['email'] }}</p>
+					        		<p>{{ $user['email'] }}</p>
 					        		@if(isset($user['birthday']))
 					        			<p>{{ $user['birthday'] }}</p>
 					        		@endif
