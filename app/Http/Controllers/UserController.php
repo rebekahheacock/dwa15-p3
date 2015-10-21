@@ -96,15 +96,12 @@ class UserController extends Controller {
                 $users[$i]['photo'] = $faker->imageUrl($width = 200, $height = 200, 'cats');
             }
         }
-
-        $jsonpath = public_path();
-        $jsonpath .= '/randomusers.json';
         
-        $json = fopen($jsonpath, 'w');
+        $json = fopen('downloads/randomusers.json', 'w');
         fwrite($json, json_encode($users));
         fclose($json);
 
-        $csv = new \SplFileObject('randomusers.csv', 'w');
+        $csv = new \SplFileObject('downloads/randomusers.csv', 'w');
         foreach ($users as $user) {
             $csv->fputcsv($user);
         }

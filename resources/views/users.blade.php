@@ -65,8 +65,8 @@
 				<div class="users">
 				<p>
 					Download results as: 
-					<a href="randomusers.json" class="btn btn-default" download>JSON</a>
-					<a href="randomusers.csv" class="btn btn-default" download>CSV</a>
+					<a href="downloads/randomusers.json" class="btn btn-default" download>JSON</a>
+					<a href="downloads/randomusers.csv" class="btn btn-default" download>CSV</a>
 				</p>
 		        	@foreach($users as $user) 
 		        		<div class="user">
