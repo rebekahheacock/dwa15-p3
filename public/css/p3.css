@@ -1,5 +1,14 @@
 /* BASE STYLES */
 
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: 50px;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Oswald', sans-serif;
 	color: #5E0525;
@@ -97,6 +106,10 @@ a.navbar-brand {
 	right: 0;
 	margin: auto;
 	letter-spacing: 0.1em;
+}
+
+.row.apps {
+	margin-bottom: 2em;
 }
 
 .apps .col-md-4 {
